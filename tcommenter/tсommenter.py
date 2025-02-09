@@ -2,7 +2,7 @@
 # This project is licensed under the MIT License - see the LICENSE file for details.
 
 """
-    The main module of the "Сommenter" library is designed to create comments on tables (and other entities)
+    The main module of the "T-COMMENTER" library is designed to create comments on tables (and other entities)
     in a database (in the current version of the library, only for PostgreSQL).
 
     Initially, the library was conceived as a tool for working with metadata in DAGs (DAG - Directed Acyclic Graph,
