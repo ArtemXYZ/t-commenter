@@ -238,12 +238,12 @@ git clone https://github.com/ArtemXYZ/t-commentor.git
 <!-- License -->
 
 [license-shield]: https://img.shields.io/github/license/ArtemXYZ/t-commentor.svg?style=for-the-badge
-[license-url]: https://github.com/ArtemXYZ/t-commentor/blob/master/LICENSE
+[license-url]: https://github.com/ArtemXYZ/t-commenter/blob/main/LICENSE
 
 
 <!-- examples -->
 
-[examples-url]: https://github.com/ArtemXYZ/t-commentor/blob/master/examples/example_usage.py
+[examples-url]: https://github.com/ArtemXYZ/t-commentor/blob/main/examples/example_usage.py
 
 <!-- MARKDOWN LINKS ----------------------------------------------------->
 
