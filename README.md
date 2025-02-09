@@ -226,24 +226,24 @@ git clone https://github.com/ArtemXYZ/t-commentor.git
 
 <!-- MARKDOWN LINKS -------------------------------------------->
 
-[contributors-shield]:  https://img.shields.io/github/contributors/ArtemXYZ/t-commentor.svg?style=for-the-badge
-[contributors-url]: https://github.com/ArtemXYZ/t-commentor/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/ArtemXYZ/t-commentor.svg?style=for-the-badge
-[forks-url]: https://github.com/ArtemXYZ/t-commentor/network/members
-[stars-shield]: https://img.shields.io/github/stars/ArtemXYZ/t-commentor.svg?style=for-the-badge
-[stars-url]: https://github.com/ArtemXYZ/t-commentor/stargazers
-[issues-shield]: https://img.shields.io/github/issues/ArtemXYZ/t-commentor.svg?style=for-the-badge
-[issues-url]: https://github.com/ArtemXYZ/t-commentor/issues
+[contributors-shield]:  https://img.shields.io/github/contributors/ArtemXYZ/t-commenter.svg?style=for-the-badge
+[contributors-url]: https://github.com/ArtemXYZ/t-commenter/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ArtemXYZ/t-commenter.svg?style=for-the-badge
+[forks-url]: https://github.com/ArtemXYZ/t-commenter/network/members
+[stars-shield]: https://img.shields.io/github/stars/ArtemXYZ/t-commenter.svg?style=for-the-badge
+[stars-url]: https://github.com/ArtemXYZ/t-commenter/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ArtemXYZ/t-commenter.svg?style=for-the-badge
+[issues-url]: https://github.com/ArtemXYZ/t-commenter/issues
 
 <!-- License -->
 
-[license-shield]: https://img.shields.io/github/license/ArtemXYZ/t-commentor.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/ArtemXYZ/t-commenter.svg?style=for-the-badge
 [license-url]: https://github.com/ArtemXYZ/t-commenter/blob/main/LICENSE
 
 
 <!-- examples -->
 
-[examples-url]: https://github.com/ArtemXYZ/t-commentor/blob/main/examples/example_usage.py
+[examples-url]: https://github.com/ArtemXYZ/t-commenter/blob/main/examples/example_usage.py
 
 <!-- MARKDOWN LINKS ----------------------------------------------------->
 
