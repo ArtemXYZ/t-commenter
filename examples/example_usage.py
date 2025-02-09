@@ -1,5 +1,5 @@
 """
-    Examples of Tcommenter usage.
+    Examples of T-COMMENTER usage.
 
     Note:
         Each example should be run independently.
@@ -11,7 +11,7 @@
 from unittest.mock import MagicMock
 from sqlalchemy.engine.base import Engine
 
-from tcommenter import Tcommenter
+from tcommenter import Сommenter
 
 # You need to set up your own SQLAlchemy engine here.
 # For example, you can import your engine like this:
@@ -26,7 +26,7 @@ engine = MagicMock(spec=Engine)
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Creating an instance of a class to work with a specific entity in the database:
-commenter = Tcommenter(engine=engine, name_table='dags_analyzer', schema='audit')
+commenter = Сommenter(engine=engine, name_table='dags_analyzer', schema='audit')
 
 # ------------------------------- Metadata extraction methods:
 

@@ -55,13 +55,14 @@ You can install the library using pip:
 ## Usage
 
 
-#### <p align="center">Creating an instance Tcommenter</p>
+#### <p align="center">Creating an instance Сommenter</p>
+
 ```python
-from tcommenter import Tcommenter
+from tcommenter import Сommenter
 from connections import engine  # Your SQLAlchemy Engine:
 
 # Creating an instance of a class to work with a specific entity in the database:
-commenter = Tcommenter(engine=engine, name_table='dags', schema='audit')
+commenter = Сommenter(engine=engine, name_table='dags', schema='audit')
 ```
 
 [//]: # (- Metadata extraction methods:)

@@ -2,7 +2,7 @@
 # This project is licensed under the MIT License - see the LICENSE file for details.
 
 """
-    The main module of the "Tcommenter" library is designed to create comments on tables (and other entities)
+    The main module of the "Сommenter" library is designed to create comments on tables (and other entities)
     in a database (in the current version of the library, only for PostgreSQL).
 
     Initially, the library was conceived as a tool for working with metadata in DAGs (DAG - Directed Acyclic Graph,
@@ -31,9 +31,9 @@ any_types = TypeVar('any_types')  # Creating a generalized data type.
 
 
 # ----------------------------------------------------------------------------------------------------------------------
-class Tcommenter: # TableCommenter
+class Сommenter: # TableCommenter
     """
-        "Tcommenter" contains the necessary methods for creating, extracting, and overloading comments to tables
+        "Сommenter" contains the necessary methods for creating, extracting, and overloading comments to tables
         (and other entities), columns in the database (in the current version of the library, only for PostgreSQL).
     """
 
@@ -632,7 +632,7 @@ class Tcommenter: # TableCommenter
 
             * Example of a call:
 
-                comments = Tcommenter(engine=ENGINE, name_table='sales', schema='audit')
+                comments = Сommenter(engine=ENGINE, name_table='sales', schema='audit')
                 type_entity = comments.get_type_entity()
 
             ***
@@ -663,7 +663,7 @@ class Tcommenter: # TableCommenter
 
             * Example of a call:
 
-                comments = Tcommenter(engine=ENGINE, name_table='sales', schema='audit')
+                comments = Сommenter(engine=ENGINE, name_table='sales', schema='audit')
                 comments.set_table_comment('This comment will be written to the table in the metadata.')
 
             ***
@@ -693,7 +693,7 @@ class Tcommenter: # TableCommenter
 
             * Example of a call:
 
-                comments = Tcommenter(engine=ENGINE, name_table='sales', schema='audit')
+                comments = Сommenter(engine=ENGINE, name_table='sales', schema='audit')
                 comments.set_view_comment('This comment will be written to the metadata representation.')
 
             ***
@@ -723,7 +723,7 @@ class Tcommenter: # TableCommenter
 
             * Example of a call:
 
-                comments = Tcommenter(engine=ENGINE, name_table='sales', schema='audit')
+                comments = Сommenter(engine=ENGINE, name_table='sales', schema='audit')
                 comments.set_materialized_view_comment(
                     'This comment will be written to the materialized representation in the metadata.'
                 )
@@ -806,7 +806,7 @@ class Tcommenter: # TableCommenter
 
             * Example of a call:
 
-                comments = Tcommenter(engine=ENGINE, name_table='sales', schema='audit')
+                comments = Сommenter(engine=ENGINE, name_table='sales', schema='audit')
 
                 # -> 'comment'.
                 comment_table_str = comments.get_table_comments()
@@ -873,7 +873,7 @@ class Tcommenter: # TableCommenter
 
             * Example of a call:
 
-                comments = Tcommenter(engine=ENGINE, name_table='sales', schema='audit')
+                comments = Сommenter(engine=ENGINE, name_table='sales', schema='audit')
 
                 # -> {'column_name_1': 'comment_1', 'column_name_2': 'comment_2', ... }
                 comment_table_dict = comments.get_table_comments()
@@ -939,7 +939,7 @@ class Tcommenter: # TableCommenter
 
             * Example of a call:
 
-                comments = Tcommenter(engine=ENGINE, name_table='sales', schema='audit')
+                comments = Сommenter(engine=ENGINE, name_table='sales', schema='audit')
 
                 # -> {'table': 'table_comment', 'columns': {'column_1': 'column_1_comment', ...}}.
                 all_comments_dict = comments.get_all_comments(service_mode=True)
@@ -984,7 +984,7 @@ class Tcommenter: # TableCommenter
 
             * Example of a call:
 
-                comments = Tcommenter(engine=ENGINE, name_table='sales', schema='audit')
+                comments = Сommenter(engine=ENGINE, name_table='sales', schema='audit')
 
                 # Option 1 (similar for data from get_column_comments())
                 # -> {'table': 'comment'}.
