@@ -1,3 +1,3 @@
-from .tcommenter import Tcommenter
+from .tсommenter import Сommenter
 
-__all__ = ["Tcommenter"]
+__all__ = ["Сommenter"]

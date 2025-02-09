@@ -24,25 +24,30 @@
 
 ## About the project
 
-    The Tcommenter library is based on the SQLAlchemy library and is designed to create comments on tables (and other
-    objects) in a database (in the current version of the library, it is only for PostgreSQL) Tcommenter - this is a 
-    modified abbreviation от "Table Commentator". In this context, the meaning of the word table has a broader meaning 
-    than the direct one, and covers objects such as a view, materialized view (other types of objects are ignored in 
-    the current implementation). 
+    The T-COMMENTER library is based on the SQLAlchemy library and is designed to 
+    create comments on tables (and other objects) in a database (in the current 
+    version of the library, it is only for PostgreSQL) T-COMMENTER - this is a 
+    modified abbreviation от "Table Commentator". In this context, the meaning of 
+    the word table has a broader meaning than the direct one, and covers objects 
+    such as a view, materialized view (other types of objects are ignored in the 
+    current implementation). 
 
-    Initially, the library was conceived as a tool for working with metadata in DAGs (DAG - Directed Acyclic Graph,
-    https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html) "Apache Airflow". The need to
-    rewrite the metadata of database objects arises when working with pandas, namely with "pandas.Data Frame.to_sql"
-    (https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_sql.html). If the method has a
-    the if_exists=replace flag, drops the table before inserting new values. In this case, all metadata is
-    they are deleted along with the table. This library was created to solve this kind of problem, as well as to
-    to ensure the convenience of working without using SQL directly.
+    Initially, the library was conceived as a tool for working with metadata in 
+    DAGs (DAG - Directed Acyclic Graph, 
+    https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html) 
+    "Apache Airflow". The need to rewrite the metadata of database objects arises 
+    when working with pandas, namely with "pandas.Data Frame.to_sql"
+    (https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.\
+    to_sql.html). If the method has a the if_exists=replace flag, drops the table 
+    before inserting new values. In this case, all metadata is they are deleted 
+    along with the table. This library was created to solve this kind of problem, 
+    as well as to to ensure the convenience of working without using SQL directly.
 
 
 ## Installation
 You can install the library using pip:
 ```sh
-   pip install tcommenter
+   pip install t-commentor
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -50,13 +55,14 @@ You can install the library using pip:
 ## Usage
 
 
-#### <p align="center">Creating an instance Tcommenter</p>
+#### <p align="center">Creating an instance Сommenter</p>
+
 ```python
-from tcommenter import Tcommenter
+from tcommenter import Сommenter
 from connections import engine  # Your SQLAlchemy Engine:
 
 # Creating an instance of a class to work with a specific entity in the database:
-commenter = Tcommenter(engine=engine, name_table='dags', schema='audit')
+commenter = Сommenter(engine=engine, name_table='dags', schema='audit')
 ```
 
 [//]: # (- Metadata extraction methods:)
@@ -148,18 +154,21 @@ print(type_entity)  # -> 'table'
 #### <p align="center">Examples of metadata overload</p>
 
 Getting comments of a special kind compatible with the "save_comments()" method.
-If it is necessary to overload all available comments (first to receive, and after your intermediate
-logic) immediately save to the same or another entity (with the same structure), there is a method  _"save_comments()"_.
+If it is necessary to overload all available comments (first to receive, and 
+after your intermediate logic) immediately save to the same or another entity 
+(with the same structure), there is a method  _"save_comments()"_.
 
 A universal method for saving comments of any type (to entities or their columns):
 - _commenter.save_comments(comments)_
 
-It takes a special kind of data that allows you to explicitly indicate the affiliation of comments from all methods
-to receive comments: _"get_table_comments()", "get_column_comments()", "get_all_comments()"_.
-However, for the first two it is necessary to set the flag: "service_mode=True" (by default service_mode=False).
-There is no "service_mode" in _"get_all_comments()"_, but the output corresponds to this flag. 
-The universal _"save_comments()"_ method allows you to save all metadata for both columns and entities at once,
-limited to just one line of code.
+It takes a special kind of data that allows you to explicitly indicate the 
+affiliation of comments from all methods to receive comments: 
+_"get_table_comments()", "get_column_comments()", "get_all_comments()"_.
+However, for the first two it is necessary to set the flag: "service_mode=True" 
+(by default service_mode=False).
+There is no "service_mode" in _"get_all_comments()"_, but the output corresponds 
+to this flag. The universal _"save_comments()"_ method allows you to save all 
+metadata for both columns and entities at once, limited to just one line of code.
 
 ```python
 
@@ -205,7 +214,7 @@ commenter.save_comments(comments)
 ## Clone the repo
 
 ````
-git clone https://github.com/ArtemXYZ/tcommenter.git
+git clone https://github.com/ArtemXYZ/t-commentor.git
 ````
 <!-- CONTACT -->
 ## Contact
@@ -215,26 +224,26 @@ git clone https://github.com/ArtemXYZ/tcommenter.git
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- MARKDOWN LINKS ------------------------------------------------------------------------------------------------->
+<!-- MARKDOWN LINKS -------------------------------------------->
 
-[contributors-shield]:  https://img.shields.io/github/contributors/ArtemXYZ/tcommenter.svg?style=for-the-badge
-[contributors-url]: https://github.com/ArtemXYZ/tcommenter/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/ArtemXYZ/tcommenter.svg?style=for-the-badge
-[forks-url]: https://github.com/ArtemXYZ/tcommenter/network/members
-[stars-shield]: https://img.shields.io/github/stars/ArtemXYZ/tcommenter.svg?style=for-the-badge
-[stars-url]: https://github.com/ArtemXYZ/tcommenter/stargazers
-[issues-shield]: https://img.shields.io/github/issues/ArtemXYZ/tcommenter.svg?style=for-the-badge
-[issues-url]: https://github.com/ArtemXYZ/tcommenter/issues
+[contributors-shield]:  https://img.shields.io/github/contributors/ArtemXYZ/t-commentor.svg?style=for-the-badge
+[contributors-url]: https://github.com/ArtemXYZ/t-commentor/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ArtemXYZ/t-commentor.svg?style=for-the-badge
+[forks-url]: https://github.com/ArtemXYZ/t-commentor/network/members
+[stars-shield]: https://img.shields.io/github/stars/ArtemXYZ/t-commentor.svg?style=for-the-badge
+[stars-url]: https://github.com/ArtemXYZ/t-commentor/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ArtemXYZ/t-commentor.svg?style=for-the-badge
+[issues-url]: https://github.com/ArtemXYZ/t-commentor/issues
 
 <!-- License -->
 
-[license-shield]: https://img.shields.io/github/license/ArtemXYZ/tcommenter.svg?style=for-the-badge
-[license-url]: https://github.com/ArtemXYZ/tcommenter/blob/master/LICENSE
+[license-shield]: https://img.shields.io/github/license/ArtemXYZ/t-commentor.svg?style=for-the-badge
+[license-url]: https://github.com/ArtemXYZ/t-commentor/blob/master/LICENSE
 
 
 <!-- examples -->
 
-[examples-url]: https://github.com/ArtemXYZ/tcommenter/blob/master/examples/example_usage.py
+[examples-url]: https://github.com/ArtemXYZ/t-commentor/blob/master/examples/example_usage.py
 
-<!-- MARKDOWN LINKS ------------------------------------------------------------------------------------------------->
+<!-- MARKDOWN LINKS ----------------------------------------------------->
 
