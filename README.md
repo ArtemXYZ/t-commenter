@@ -1,26 +1,29 @@
-
 <a id="readme-top"></a>
-
-
-
-
 
 <!-- PROJECT SHIELDS --> 
 > # <p align="center">**T-COMMENTER**</p>
 
+<div align="center">
 
+![PyPI Version](https://img.shields.io/pypi/v/t-commenter?label=Version)
+![PyPI Downloads](https://img.shields.io/pypi/dm/t-commenter?label=Downloads)
+![Python Versions](https://img.shields.io/pypi/pyversions/t-commenter?label=Python)
+![PyPI License](https://img.shields.io/pypi/l/t-commenter?label=License)
+![GitHub Issues](https://img.shields.io/github/created-at/ArtemXYZ/t-commenter)
 
+[![GitHub Stars](https://img.shields.io/github/stars/ArtemXYZ/t-commenter)](https://github.com/ArtemXYZ/t-commenter/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/ArtemXYZ/t-commenter)](https://github.com/ArtemXYZ/t-commenter/network/members)
+[![GitHub contributors](https://img.shields.io/github/contributors/ArtemXYZ/t-commenter)](https://github.com/ArtemXYZ/t-commenter/contributors)
+[![GitHub Issues](https://img.shields.io/github/issues/ArtemXYZ/t-commenter)](https://github.com/ArtemXYZ/t-commenter/issues)
+[![GitHub Discussions](https://img.shields.io/github/discussions/ArtemXYZ/t-commenter)](https://github.com/ArtemXYZ/t-commenter/discussions)
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+</div>
+
 
 <div style="text-align: center;">
-    <img src="docs/images/t-commenter.png" style="width: 500px; height: 300px;" alt="LOGO">
+    <img src="https://raw.githubusercontent.com/ArtemXYZ/t-commenter/main/docs/images/t-commenter.png" 
+    style="width: 500px; height: 300px;" alt="LOGO">
 </div> 
-
 
 ## About the project
 
@@ -37,15 +40,19 @@
     https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/dags.html) 
     "Apache Airflow". The need to rewrite the metadata of database objects arises 
     when working with pandas, namely with "pandas.Data Frame.to_sql"
-    (https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.\
-    to_sql.html). If the method has a the if_exists=replace flag, drops the table 
+    (
+        https://pandas.pydata.org/pandas-docs/stable/reference/api/
+        pandas.DataFrame.to_sql.html
+    ). 
+    If the method has a the if_exists=replace flag, drops the table 
     before inserting new values. In this case, all metadata is they are deleted 
     along with the table. This library was created to solve this kind of problem, 
     as well as to to ensure the convenience of working without using SQL directly.
 
-
 ## Installation
+
 You can install the library using pip:
+
 ```sh
    pip install t-commentor
 ```
@@ -53,7 +60,6 @@ You can install the library using pip:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Usage
-
 
 #### <p align="center">Creating an instance Сommenter</p>
 
@@ -66,16 +72,16 @@ commenter = Сommenter(engine=engine, name_table='dags', schema='audit')
 ```
 
 [//]: # (- Metadata extraction methods:)
+
 #### <p align="center">Metadata extraction methods</p>
 
 ```python
 
 # Getting a comment to the table (only to the entity itself, excluding comments to columns):
-comments = commenter.get_table_comments() 
-print(comments) # -> 'The table contains data unloading from Airflow.'
+comments = commenter.get_table_comments()
+print(comments)  # -> 'The table contains data unloading from Airflow.'
 
 ```
-
 
 ```python
 
@@ -100,6 +106,7 @@ comments = commenter.get_column_comments(1, 2)
 print(comments)  # -> {'dag_id': 'pass', 'description': 'pass'}
 
 ````
+
 ```python
 
 # Getting all available comments on an entity and its columns:
@@ -111,6 +118,7 @@ print(comments)  # -> '{'table': 'pass', 'columns': {'dag_id': 'pass', 'descript
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 [//]: # (- Metadata recording methods:)
+
 #### <p align="center">Metadata recording methods</p>
 
 ```python
@@ -123,7 +131,8 @@ print(comments)  # -> 'The table contains data unloading from Airflow.'
 ````
 
 *Similarly for methods:*
-* set_view_comment() 
+
+* set_view_comment()
 * set_materialized_view_comment()
 
 ```python
@@ -138,6 +147,7 @@ print(comments)  # -> {'dag_id': 'dag_id_test', 'description': 'description_test
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 [//]: # (# -------------------------------Service methods:)
+
 #### <p align="center">Service methods</p>
 
 ```python
@@ -151,23 +161,25 @@ print(type_entity)  # -> 'table'
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 [//]: # (# ------------------------------- Examples of metadata overload:)
+
 #### <p align="center">Examples of metadata overload</p>
 
 Getting comments of a special kind compatible with the "save_comments()" method.
-If it is necessary to overload all available comments (first to receive, and 
-after your intermediate logic) immediately save to the same or another entity 
+If it is necessary to overload all available comments (first to receive, and
+after your intermediate logic) immediately save to the same or another entity
 (with the same structure), there is a method  _"save_comments()"_.
 
 A universal method for saving comments of any type (to entities or their columns):
+
 - _commenter.save_comments(comments)_
 
-It takes a special kind of data that allows you to explicitly indicate the 
-affiliation of comments from all methods to receive comments: 
+It takes a special kind of data that allows you to explicitly indicate the
+affiliation of comments from all methods to receive comments:
 _"get_table_comments()", "get_column_comments()", "get_all_comments()"_.
-However, for the first two it is necessary to set the flag: "service_mode=True" 
+However, for the first two it is necessary to set the flag: "service_mode=True"
 (by default service_mode=False).
-There is no "service_mode" in _"get_all_comments()"_, but the output corresponds 
-to this flag. The universal _"save_comments()"_ method allows you to save all 
+There is no "service_mode" in _"get_all_comments()"_, but the output corresponds
+to this flag. The universal _"save_comments()"_ method allows you to save all
 metadata for both columns and entities at once, limited to just one line of code.
 
 ```python
@@ -197,14 +209,14 @@ commenter.save_comments(comments)
 
 ````
 
-
 ## Examples
 
- - Download the examples file: [`examples/example_usage.py`][examples-url]
+- Download the examples file: [`examples/example_usage.py`][examples-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
+
 ## License
 
 - Distributed under the MIT License. See [`LICENSE`][license-url]
@@ -216,34 +228,29 @@ commenter.save_comments(comments)
 ````
 git clone https://github.com/ArtemXYZ/t-commentor.git
 ````
+
 <!-- CONTACT -->
+
 ## Contact
 
-- GitHub - [ArtemXYZ](https://github.com/ArtemXYZ)  
+- GitHub - [ArtemXYZ](https://github.com/ArtemXYZ)
 - Telegram - [ArtemP_khv](https://t.me/ArtemP_khv)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS -------------------------------------------->
 
-[contributors-shield]:  https://img.shields.io/github/contributors/ArtemXYZ/t-commentor.svg?style=for-the-badge
-[contributors-url]: https://github.com/ArtemXYZ/t-commentor/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/ArtemXYZ/t-commentor.svg?style=for-the-badge
-[forks-url]: https://github.com/ArtemXYZ/t-commentor/network/members
-[stars-shield]: https://img.shields.io/github/stars/ArtemXYZ/t-commentor.svg?style=for-the-badge
-[stars-url]: https://github.com/ArtemXYZ/t-commentor/stargazers
-[issues-shield]: https://img.shields.io/github/issues/ArtemXYZ/t-commentor.svg?style=for-the-badge
-[issues-url]: https://github.com/ArtemXYZ/t-commentor/issues
 
-<!-- License -->
-
-[license-shield]: https://img.shields.io/github/license/ArtemXYZ/t-commentor.svg?style=for-the-badge
-[license-url]: https://github.com/ArtemXYZ/t-commentor/blob/master/LICENSE
+[license-url]: https://github.com/ArtemXYZ/t-commenter/blob/main/LICENSE
 
 
 <!-- examples -->
 
-[examples-url]: https://github.com/ArtemXYZ/t-commentor/blob/master/examples/example_usage.py
+[examples-url]: https://github.com/ArtemXYZ/t-commenter/blob/main/examples/example_usage.py
+
 
 <!-- MARKDOWN LINKS ----------------------------------------------------->
+
+
+
 
