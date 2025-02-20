@@ -22,7 +22,7 @@
 
 <div style="text-align: center;">
     <img src="https://raw.githubusercontent.com/ArtemXYZ/t-commenter/main/docs/images/t-commenter.png" 
-    style="width: 700px; height: 300px;" alt="LOGO">
+    style="width: 900px; height: 300px;" alt="LOGO">
 </div> 
 
 ## About the project
