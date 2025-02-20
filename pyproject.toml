@@ -21,9 +21,9 @@ classifiers = [
     "Operating System :: OS Independent",
     'License :: OSI Approved :: MIT License' # !
 ]
-license = "MIT"
-license-files = ["LICEN[CS]E*"]  # !
-
+#license = "MIT"
+#license-files = ["LICEN[CS]E*"]
+license = { file = "LICENSE" }
 #-----------------------------------------------------------------------------------------------------------------------
 keywords = [
     'comments on tables', 'tables', 'views', 'materialized views', 'columns', 'PostgreSQL', 't-commenter',
