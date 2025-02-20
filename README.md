@@ -5,24 +5,24 @@
 
 <div align="center">
 
-![PyPI Version](https://img.shields.io/pypi/v/t-commenter?label=Version)
-![PyPI Downloads](https://img.shields.io/pypi/dm/t-commenter?label=Downloads)
-![Python Versions](https://img.shields.io/pypi/pyversions/t-commenter?label=Python)
-![PyPI License](https://img.shields.io/pypi/l/t-commenter?label=License)
-![GitHub Issues](https://img.shields.io/github/created-at/ArtemXYZ/t-commenter)
+![Version][PyPI Version]
+![Downloads][PyPI Downloads]
+![Versions][Python Versions]
+![License][PyPI License]
+![Issues][PyPI Created]
 
-[![GitHub Stars](https://img.shields.io/github/stars/ArtemXYZ/t-commenter)](https://github.com/ArtemXYZ/t-commenter/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/ArtemXYZ/t-commenter)](https://github.com/ArtemXYZ/t-commenter/network/members)
-[![GitHub contributors](https://img.shields.io/github/contributors/ArtemXYZ/t-commenter)](https://github.com/ArtemXYZ/t-commenter/contributors)
-[![GitHub Issues](https://img.shields.io/github/issues/ArtemXYZ/t-commenter)](https://github.com/ArtemXYZ/t-commenter/issues)
-[![GitHub Discussions](https://img.shields.io/github/discussions/ArtemXYZ/t-commenter)](https://github.com/ArtemXYZ/t-commenter/discussions)
+[![Stargazers][GitHub Stars]][stars-url]
+[![Forks][GitHub Forks]][forks-url]
+[![Contributors][GitHub Contributors]][contributors-url]
+[![Issues][GitHub Issues]][issues-url]
+[![Discussions][GitHub Discussions]][discussions-url]
 
 </div>
 
 
 <div style="text-align: center;">
     <img src="https://raw.githubusercontent.com/ArtemXYZ/t-commenter/main/docs/images/t-commenter.png" 
-    style="width: 500px; height: 300px;" alt="LOGO">
+    style="width: 700px; height: 300px;" alt="LOGO">
 </div> 
 
 ## About the project
@@ -238,17 +238,33 @@ git clone https://github.com/ArtemXYZ/t-commentor.git
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+
+
+
 <!-- MARKDOWN LINKS -------------------------------------------->
+[PyPI Version]: https://img.shields.io/pypi/v/t-commenter?label=Version
+[PyPI Downloads]: https://img.shields.io/pypi/dm/t-commenter?label=Downloads
+[Python Versions]: https://img.shields.io/pypi/pyversions/t-commenter?label=Python
+[PyPI License]: https://img.shields.io/pypi/l/t-commenter?label=License
+[PyPI Created]: https://img.shields.io/github/created-at/ArtemXYZ/t-commenter
+
+
+[GitHub Stars]: https://img.shields.io/github/stars/ArtemXYZ/t-commenter?style
+[GitHub Forks]: https://img.shields.io/github/forks/ArtemXYZ/t-commenter?style
+[GitHub Contributors]: https://img.shields.io/github/contributors/ArtemXYZ/t-commenter 
+[GitHub Issues]:  https://img.shields.io/github/issues/ArtemXYZ/t-commenter
+[GitHub Discussions]: https://img.shields.io/github/discussions/ArtemXYZ/t-commenter
+
+[stars-url]:  https://github.com/ArtemXYZ/t-commenter/stargazers
+[forks-url]:   https://github.com/ArtemXYZ/t-commenter/network/members
+[contributors-url]: https://github.com/ArtemXYZ/t-commenter/contributors
+[issues-url]:  https://github.com/ArtemXYZ/t-commenter/issues
+[discussions-url]:  https://github.com/ArtemXYZ/t-commenter/discussions
 
 
 [license-url]: https://github.com/ArtemXYZ/t-commenter/blob/main/LICENSE
-
-
-<!-- examples -->
-
 [examples-url]: https://github.com/ArtemXYZ/t-commenter/blob/main/examples/example_usage.py
-
-
 <!-- MARKDOWN LINKS ----------------------------------------------------->
 
 

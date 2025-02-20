@@ -1,10 +1,8 @@
-# Указывает, что используется setuptools для сборки проекта.
 [build-system]
 requires = ["setuptools>=61.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 #-----------------------------------------------------------------------------------------------------------------------
-# Основные метаданные проекта, такие как имя, версия, автор, описание, зависимости и классификаторы.
 [project]
 name = "t-commenter"
 version = "0.1.1"
@@ -24,7 +22,6 @@ classifiers = [
     'License :: OSI Approved :: MIT License' # !
 ]
 license = "MIT"
-# Будет искать файлы, соответствующие: LICENSE, LICENCE, LICENSE.txt, LICENCE.md и т.д.
 license-files = ["LICEN[CS]E*"]  # !
 
 #-----------------------------------------------------------------------------------------------------------------------
@@ -35,7 +32,6 @@ keywords = [
     'airflow', 'Airflow', 'Table Commentator', 'set table comment', 'get table comments', 'set column comment'
 ]
 #-----------------------------------------------------------------------------------------------------------------------
-# Зависимости вместо install_requires.
 dependencies = [
     "SQLAlchemy>=2.0.37, <3.0.0",
     "psycopg2-binary>=2.9.0, <3.0.0"
@@ -46,28 +42,19 @@ dependencies = [
 dev = ["pytest>=8.3.4, <9.0.0"]
 
 #-----------------------------------------------------------------------------------------------------------------------
-# Ссылка на репозиторий.
 [project.urls]
-#Homepage = ''  # !
-#Documentation = "https://readthedocs.org"  # !
-
 Repository = "https://github.com/ArtemXYZ/t-commenter.git"
 Issues = "https://github.com/ArtemXYZ/t-commenter/issues"
 #Changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"  # !
 
 #-----------------------------------------------------------------------------------------------------------------------
-# Настройки для setuptools.
 [tool.setuptools]
-# Включает дополнительные файлы (аналог include_package_data = True в setup.cfg).
 include-package-data = true
-
-# Указывает, где искать пакеты (аналог where = tcommenter в setup.cfg).
 [tool.setuptools.packages.find]
 where = ["tcommenter"]
 
 #-----------------------------------------------------------------------------------------------------------------------
-# Указывает дополнительные файлы для включения в пакет.
 [tool.setuptools.package-data]
 tcommenter = [
-    "docs/images/t-commenter.png",  # Добавляем ваш файл
+    "docs/images/t-commenter.png",
 ]
