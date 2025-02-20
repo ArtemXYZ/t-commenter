@@ -25,7 +25,6 @@ license = "MIT"
 license-files = ["LICEN[CS]E*"]  # !
 
 #-----------------------------------------------------------------------------------------------------------------------
-[project]
 keywords = [
     'comments on tables', 'tables', 'views', 'materialized views', 'columns', 'PostgreSQL', 't-commenter',
     'SQLAlchemy', 'create comments on tables', 'objects in a database', 'T-COMMENTER', 'DAGs',
